@@ -1,0 +1,201 @@
+{
+  "section": "TE5",
+  "title": "Trigonometric Laws: Law of Sines and Law of Cosines",
+  "learningObjective": "Use the law of sines and/or the law of cosines to solve non-right triangles.",
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "conceptual",
+      "question": "What is the Law of Sines, and what does it actually say?",
+      "answer": "The Law of Sines says that in any triangle — right or not — the ratio of a side's length to the sine of its opposite angle is the same for all three sides.<div class=\"example-box\"><div class=\"label\">Formula</div><p class=\"math-line\">\\[ \\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} \\]</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">You only ever need to set ONE fraction equal to another — not all three at once.</p></div>"
+    },
+    {
+      "id": "faq-2",
+      "category": "conceptual",
+      "question": "When can I use the Law of Sines to solve a triangle?",
+      "answer": "The Law of Sines works whenever you have a complete opposite pair — an angle and the side directly across from it — plus one more piece of information. In practice, that means it applies to AAS and ASA triangles (two angles and a side) and to SSA triangles (two sides and a non-included angle) — though SSA comes with a complication of its own (faq-5)."
+    },
+    {
+      "id": "faq-3",
+      "category": "conceptual",
+      "question": "What is the Law of Cosines, and how is it different from the Pythagorean Theorem?",
+      "answer": "The Law of Cosines relates all three sides of ANY triangle to the cosine of one included angle — it's a generalized version of the Pythagorean Theorem that works even when there's no right angle.<div class=\"example-box\"><div class=\"label\">Formula</div><p class=\"math-line\">\\[ a^2 = b^2 + c^2 - 2bc\\cos A \\]</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">If angle A happens to be 90°, then \\( \\cos A = 0 \\), and the whole last term disappears — leaving exactly \\( a^2=b^2+c^2 \\), the Pythagorean Theorem. The Pythagorean Theorem is really just a special case of this more general law.</p></div>"
+    },
+    {
+      "id": "faq-4",
+      "category": "conceptual",
+      "question": "When do I need the Law of Cosines instead of the Law of Sines?",
+      "answer": "Use the Law of Cosines whenever you DON'T have a complete opposite pair (an angle and its directly-across side) to work with — specifically for SAS triangles (two sides and the included angle) and SSS triangles (all three sides, no angles at all). The Law of Sines simply has no way to get started in either of those situations."
+    },
+    {
+      "id": "faq-5",
+      "category": "conceptual",
+      "question": "What is the Ambiguous Case, and why does it only happen with the Law of Sines?",
+      "answer": "The Ambiguous Case happens specifically with SSA triangles (two sides and a non-included angle), where the given information can produce zero, one, or two valid triangles — not always exactly one. This happens because sine is positive in both Quadrant I and Quadrant II (TR5), so when you solve for an angle using the Law of Sines, there are genuinely two different angle values that could both make the sine ratio true — and you have to check whether one, both, or neither actually forms a valid triangle. The Law of Cosines never has this problem, since it always produces a unique answer.<div class=\"graph-wrap\"><svg viewBox=\"0 0 260 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"160\" x2=\"230\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><path d=\"M 86,160 A 26,26 0 0 0 82.5,147.0\" fill=\"none\" stroke=\"#4a4a5a\" stroke-width=\"1.5\"/><text x=\"48\" y=\"177\" font-size=\"12\" fill=\"#4a4a5a\" font-weight=\"700\" text-anchor=\"end\">A</text><line x1=\"60\" y1=\"160\" x2=\"146.6\" y2=\"110\" stroke=\"#0a3f52\" stroke-width=\"3\"/><text x=\"95\" y=\"128\" font-size=\"12\" fill=\"#0a3f52\" font-weight=\"700\">b</text><line x1=\"146.6\" y1=\"110\" x2=\"146.6\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><text x=\"152\" y=\"138\" font-size=\"11\" fill=\"#94a3b8\">h</text><circle cx=\"146.6\" cy=\"110\" r=\"70\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/><circle cx=\"97.6\" cy=\"160\" r=\"4\" fill=\"#1a6b6b\"/><circle cx=\"195.6\" cy=\"160\" r=\"4\" fill=\"#D4622A\"/><line x1=\"146.6\" y1=\"110\" x2=\"97.6\" y2=\"160\" stroke=\"#1a6b6b\" stroke-width=\"2.5\"/><line x1=\"146.6\" y1=\"110\" x2=\"195.6\" y2=\"160\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"108\" y=\"177\" font-size=\"10\" fill=\"#1a6b6b\" font-weight=\"600\" text-anchor=\"end\">solution 1</text><text x=\"190\" y=\"177\" font-size=\"10\" fill=\"#D4622A\" font-weight=\"600\">solution 2</text></svg></div><p class=\"graph-caption\">Swinging side a (dashed circle) crosses the baseline twice — two different triangles both satisfy the same given information.</p>"
+    },
+    {
+      "id": "faq-6",
+      "category": "conceptual",
+      "question": "What do AAS, ASA, SSA, SAS, and SSS mean, and why does the letter order matter?",
+      "answer": "Each letter combination describes which three pieces of a triangle you're given, in the order you'd encounter them going around the triangle — A for a known angle, S for a known side. The ORDER matters because it tells you whether a given angle sits between two known sides or not.<div class=\"example-box\"><div class=\"label\">Summary</div><p class=\"math-line\">AAS / ASA — two angles + a side &rarr; Law of Sines (no ambiguity)</p><p class=\"math-line\">SSA — two sides + non-included angle &rarr; Law of Sines (Ambiguous Case!)</p><p class=\"math-line\">SAS — two sides + included angle &rarr; Law of Cosines</p><p class=\"math-line\">SSS — three sides, no angles &rarr; Law of Cosines</p></div>"
+    },
+    {
+      "id": "faq-7",
+      "category": "sticking-points",
+      "question": "How do I solve a triangle when I'm given two angles and a side (AAS or ASA)?",
+      "answer": "Find the third angle first by subtracting the two known angles from 180°, then use the Law of Sines twice — once for each remaining missing side.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Triangle ABC: \\( A=40° \\), \\( C=75° \\), \\( a=12 \\). Find B, b, and c.</p><p class=\"math-line\">\\( B=180°-40°-75°=65° \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\dfrac{12}{\\sin 40°}=\\dfrac{b}{\\sin 65°} \\) &rarr; \\( b\\approx 16.9 \\)</p><p class=\"math-line\">\\( \\dfrac{12}{\\sin 40°}=\\dfrac{c}{\\sin 75°} \\) &rarr; \\( c\\approx 18.0 \\)</p></div>"
+    },
+    {
+      "id": "faq-8",
+      "category": "sticking-points",
+      "question": "How do I set up the Law of Sines proportion correctly?",
+      "answer": "Match each side with the angle DIRECTLY ACROSS from it — never a side with an adjacent angle. Write your proportion using only the one complete opposite pair you already know, plus the pair you're solving for.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Known: angle \\( B \\) and its opposite side \\( b \\). Solving for side \\( c \\), opposite angle \\( C \\).</p><p class=\"math-line\">\\( \\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C} \\)</p></div>"
+    },
+    {
+      "id": "faq-9",
+      "category": "sticking-points",
+      "question": "How do I know how many triangles exist in an SSA (Ambiguous Case) situation?",
+      "answer": "Solve for the unknown angle using the Law of Sines as usual, but check the result BEFORE moving on. If the sine value comes out greater than 1, no triangle exists at all — sine can never exceed 1 (TR5). If it's a valid sine value, you get one candidate angle immediately, and there's always a second candidate angle (180° minus the first) to check as well — see faq-11 for how to test whether that second candidate actually works.<div class=\"example-box\"><div class=\"label\">Worked Example — No Solution</div><p class=\"math-line\">\\( B=84° \\), \\( a=18 \\), \\( b=9 \\): \\( \\dfrac{18}{\\sin A}=\\dfrac{9}{\\sin 84°} \\) &rarr; \\( \\sin A \\approx 1.99 \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Since sine can never exceed 1, no triangle exists.</p></div>"
+    },
+    {
+      "id": "faq-10",
+      "category": "sticking-points",
+      "question": "How do I find both possible triangles when there are two solutions in the Ambiguous Case?",
+      "answer": "Solve for the first (acute) candidate angle using the inverse sine as usual, then find the second candidate by subtracting that result from 180°. Check that the second candidate is actually valid (faq-11), and if so, solve the REST of both triangles completely and separately — they'll have different remaining angles and sides.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">\\( B=45° \\), \\( a=28 \\), \\( b=27 \\): first candidate \\( A\\approx 47.2° \\), second candidate \\( A\\approx 132.8° \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Both are valid here, producing two completely different triangles.</p></div>"
+    },
+    {
+      "id": "faq-11",
+      "category": "sticking-points",
+      "question": "How do I know when a second candidate triangle from the Ambiguous Case is actually invalid?",
+      "answer": "Add the second candidate angle to the OTHER angle you already knew. If that sum is 180° or more, the third angle would have to be zero or negative — which is impossible — so that second triangle doesn't actually exist.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Known angle \\( C=145° \\), second candidate \\( B\\approx 156° \\)</p><p class=\"math-line\">\\( 145°+156°=301° \\), already over 180° — this second triangle is impossible.</p></div>"
+    },
+    {
+      "id": "faq-12",
+      "category": "sticking-points",
+      "question": "How do I use the Law of Cosines to find a missing side when given two sides and the included angle (SAS)?",
+      "answer": "Plug the two known sides and the included angle directly into the Law of Cosines formula, matching the missing side to the angle between the two known sides.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Triangle ABC: \\( A=70° \\), \\( b=14 \\), \\( c=7 \\). Find side a.</p><p class=\"math-line\">\\( a^2=14^2+7^2-2(14)(7)\\cos 70° \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( a^2\\approx 196+49-67.06\\approx 177.9 \\) &rarr; \\( a\\approx 13.3 \\)</p></div>"
+    },
+    {
+      "id": "faq-13",
+      "category": "sticking-points",
+      "question": "How do I use the Law of Cosines to find a missing angle when given all three sides (SSS)?",
+      "answer": "Rearrange the Law of Cosines to isolate the cosine term, plug in all three known sides, then apply the inverse cosine to solve for the angle itself.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Triangle with sides \\( a=8 \\), \\( b=6 \\), \\( c=10 \\). Find angle C.</p><p class=\"math-line\">\\( c^2=a^2+b^2-2ab\\cos C \\) &rarr; \\( \\cos C=\\dfrac{a^2+b^2-c^2}{2ab} \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\cos C=\\dfrac{64+36-100}{96}=0 \\) &rarr; \\( C=\\arccos(0)=90° \\)</p></div>"
+    },
+    {
+      "id": "faq-14",
+      "category": "sticking-points",
+      "question": "Once I've found one angle in an SSS or SAS triangle, how do I find the other two?",
+      "answer": "Once you have at least one full opposite pair (an angle and its matching side), it's usually fastest to switch over to the Law of Sines for the second angle — then find the third angle by subtracting the first two from 180°. You can also use the Law of Cosines a second time if you prefer to stay consistent, but the Law of Sines is typically quicker once you have one angle to work with."
+    },
+    {
+      "id": "faq-15",
+      "category": "sticking-points",
+      "question": "How do I decide which law to use — Law of Sines or Law of Cosines — just by looking at what I'm given?",
+      "answer": "Check whether you have a complete opposite pair (an angle and the side directly across from it) among your given information. If yes, use the Law of Sines. If no complete opposite pair exists — meaning you only have SAS or SSS information — use the Law of Cosines instead, since it's the only tool that can get started without one."
+    },
+    {
+      "id": "faq-16",
+      "category": "connections",
+      "question": "How does this section connect to TE4's right-triangle solving?",
+      "answer": "TE4's tools — SOH-CAH-TOA and the Pythagorean Theorem — only work when a triangle has a right angle. This section extends triangle-solving to EVERY triangle, right or not, using two more general laws that still rely on the same underlying trig ratios TE4 introduced. In fact, faq-3 shows the Pythagorean Theorem is just the Law of Cosines with a 90° angle plugged in — TE4 was always a special case of what you're learning here."
+    },
+    {
+      "id": "faq-17",
+      "category": "connections",
+      "question": "How does the Ambiguous Case connect to TR5's quadrant sign ideas?",
+      "answer": "The entire reason the Ambiguous Case exists is TR5's observation that sine is positive in both Quadrant I and Quadrant II — meaning two different angles between 0° and 180° can share the exact same sine value. Solving a triangle with the Law of Sines runs directly into that same ambiguity, which is why you always have to check both candidate angles rather than assuming there's only one answer."
+    },
+    {
+      "id": "faq-18",
+      "category": "connections",
+      "question": "Why do the Law of Sines and Law of Cosines matter beyond this course?",
+      "answer": "Surveying, navigation, and engineering all depend on solving triangles that aren't conveniently right triangles — measuring distances across terrain you can't directly walk across, calculating forces at odd angles, or triangulating a position using bearings to two known landmarks. These two laws are the standard tools for exactly that kind of real-world triangle, and they reappear constantly in physics and any field involving vectors or forces at an angle."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "The Law of Sines: The Basics",
+      "url": "https://www.youtube.com/watch?v=dxYVBbSXYkA",
+      "description": "An introduction to the Law of Sines and how to use it to solve a triangle, before tackling the Ambiguous Case.",
+      "category": "law-of-sines",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-2",
+        "faq-7",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "vid-2",
+      "title": "The Law of Sines — No Solution (SSA)",
+      "url": "https://www.youtube.com/watch?v=Ng9ACtUCBAU",
+      "description": "Explains how the Ambiguous Case can produce no valid triangle at all when using the Law of Sines.",
+      "category": "law-of-sines",
+      "relatedFaqs": [
+        "faq-5",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-3",
+      "title": "The Law of Sines — Two Solutions (SSA)",
+      "url": "https://www.youtube.com/watch?v=ijGxnVb9b9c",
+      "description": "Solving a triangle using the Law of Sines when the Ambiguous Case produces two valid solutions.",
+      "category": "law-of-sines",
+      "relatedFaqs": [
+        "faq-5",
+        "faq-10",
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-4",
+      "title": "Use the Law of Cosines to Find the Measure of an Angle of a Triangle (SSS)",
+      "url": "https://www.youtube.com/watch?v=W1Yieh4NF_A",
+      "description": "Finding a missing angle of a triangle using the Law of Cosines when all three sides are known.",
+      "category": "law-of-cosines",
+      "relatedFaqs": [
+        "faq-3",
+        "faq-13"
+      ]
+    }
+  ],
+  "apps": [],
+  "prompts": {
+    "guided": [
+      {
+        "id": "prompt-1",
+        "title": "Practice the Law of Sines for AAS/ASA",
+        "prompt": "I'm learning to solve a triangle using the Law of Sines when I'm given two angles and a side. Give me a triangle like this and walk me through finding the third angle first, then using the Law of Sines twice to find the two missing sides. Give me more practice problems and check my work."
+      },
+      {
+        "id": "prompt-2",
+        "title": "Master the Ambiguous Case Decision Process",
+        "prompt": "I'm learning to figure out how many triangles exist in an SSA (Ambiguous Case) situation. Give me a triangle with two sides and a non-included angle, and walk me through the full process: solve for the angle, check if the sine value is valid, find both candidate angles, and check whether the second candidate is actually possible. Give me three more practice problems — one with no solution, one with one solution, and one with two solutions — and check my reasoning each time."
+      },
+      {
+        "id": "prompt-3",
+        "title": "Practice the Law of Cosines for SAS and SSS",
+        "prompt": "I'm learning to use the Law of Cosines. Give me a triangle with two sides and the included angle (SAS), and walk me through finding the missing side. Then give me a triangle with all three sides (SSS) and walk me through finding a missing angle. Give me more practice problems of each type and check my work."
+      },
+      {
+        "id": "prompt-4",
+        "title": "Practice Choosing the Right Law",
+        "prompt": "I sometimes struggle to decide whether to use the Law of Sines or the Law of Cosines. Give me several different triangle scenarios — some AAS, some SSA, some SAS, some SSS — and ask me to identify which law I'd use for each one before I actually solve anything. Check my reasoning and help me understand any I got wrong."
+      },
+      {
+        "id": "prompt-5",
+        "title": "Connect the Ambiguous Case to TR5",
+        "prompt": "I've learned that the Ambiguous Case happens because sine is positive in both Quadrant I and Quadrant II, which I first learned about in TR5. Can you help me see this connection concretely — walk me through why solving sin(B) = 0.7, for example, gives two different valid angles between 0° and 180°, and how that directly explains why the Law of Sines can produce two triangles?"
+      }
+    ],
+    "open": [
+      {
+        "id": "open-1",
+        "title": "Create Your Own",
+        "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section TE5 (Law of Sines and Law of Cosines). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
+      }
+    ]
+  }
+}
