@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TE6: Applications of Trigonometry — Student Resource Hub</title>
+<title>TE5: Law of Sines and Law of Cosines — Student Resource Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
@@ -525,10 +525,6 @@
   .tri-find { font: 700 13px 'Inter', sans-serif; fill: #b04c19; }
   .tri-val { font: 700 13px 'Inter', sans-serif; fill: #1d4ed8; }
   .pr-badge { white-space: nowrap; }
-  .g-solid { fill: #e5e7eb; stroke: #6b7280; stroke-width: 1.5; }
-  .g-water { fill: #bfdbfe; opacity: 0.6; }
-  .g-sight { stroke: #1d4ed8; stroke-width: 2.5; }
-  .g-horiz { stroke: #b04c19; stroke-width: 1.5; stroke-dasharray: 5 4; }
 </style>
 </head>
 <body>
@@ -537,10 +533,10 @@
 
 <header class="page-header" role="banner">
   <div class="header-inner">
-    <p class="section-label" aria-hidden="true">Section TE6</p>
-    <h1>Applications of Trigonometry</h1>
+    <p class="section-label" aria-hidden="true">Section TE5</p>
+    <h1>Law of Sines and Law of Cosines</h1>
     <p class="learning-objective">
-      <strong>Learning Objective:</strong> Solve applications that require the use of trigonometry to find a side or angle.
+      <strong>Learning Objective:</strong> Use the law of sines and/or the law of cosines to solve non-right triangles.
     </p>
   </div>
 </header>
@@ -618,13 +614,13 @@
 
 <script>
 // ===== DATA =====
-// Data lives in te6-data.json — edit that file to add/change FAQs, videos, apps, or prompts.
+// Data lives in te5-data.json — edit that file to add/change FAQs, videos, apps, or prompts.
 let DATA = null;
 
 async function loadData() {
-  const response = await fetch('te6-data.json');
+  const response = await fetch('te5-data.json');
   if (!response.ok) {
-    throw new Error(`Failed to load te6-data.json: ${response.status}`);
+    throw new Error(`Failed to load te5-data.json: ${response.status}`);
   }
   return await response.json();
 }
@@ -720,11 +716,10 @@ function renderVideos() {
   }
 
   const categoryLabels = {
-    'right-triangle-apps': { title: 'Right-Triangle Applications', desc: 'Angles of elevation and depression, finding heights and distances' },
-    'law-apps': { title: 'Law of Sines & Law of Cosines Applications', desc: 'Applications with non-right triangles' },
-    'periodic-models': { title: 'Periodic Models', desc: 'Modeling a repeating cycle with sine and cosine' }
+    'law-of-sines': { title: 'Law of Sines & the Ambiguous Case', desc: 'Start here — the basics, and how many triangles a given SSA situation actually produces' },
+    'law-of-cosines': { title: 'Law of Cosines', desc: 'Solving SAS and SSS triangles' }
   };
-  const categoryOrder = ['right-triangle-apps', 'law-apps', 'periodic-models'];
+  const categoryOrder = ['law-of-sines', 'law-of-cosines'];
 
   categoryOrder.forEach(cat => {
     const vids = DATA.videos.filter(v => v.category === cat);
@@ -1134,7 +1129,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="empty-state">
         <div class="empty-icon">⚠️</div>
         <p><strong>Couldn't load page content.</strong><br>
-        Make sure <code>te6-data.json</code> is in the same folder as this page
+        Make sure <code>te5-data.json</code> is in the same folder as this page
         (or the same Netlify deploy), then reload.</p>
       </div>`;
     return;
