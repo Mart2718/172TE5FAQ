@@ -850,6 +850,8 @@ function glMath(el) {
 
 function glHideEmptyTabs() {
   // A page can launch with only Guided Learning; tabs with no content yet are hidden.
+  // Full FAQ pages keep every tab (an empty Apps tab shows its "coming soon" message).
+  if ((DATA.faqs || []).length > 0) return;
   const has = {
     faq: (DATA.faqs || []).length > 0,
     prompts: DATA.prompts ? ((DATA.prompts.guided || []).length + (DATA.prompts.open || []).length) > 0 : false,
