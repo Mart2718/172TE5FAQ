@@ -1,0 +1,353 @@
+{
+  "section": "TE4",
+  "title": "Solving Right Triangles",
+  "learningObjective": "Use trigonometric functions and the Pythagorean Theorem to solve right triangles.",
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "conceptual",
+      "question": "What does it mean to \"solve\" a right triangle?",
+      "answer": "Solving a right triangle means finding every side length and every angle measure — all six pieces of information, even when you're only handed a couple of them to start. Since the triangle has a 90° angle by definition, and its two acute angles must add to 90° (faq-3), you actually only need a small amount of starting information (any two sides, or one side and one acute angle) to figure out everything else. Throughout this page, every triangle is a right triangle with its right angle at vertex C.<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 215\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"50,160 50,40 210,160\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"50\" y=\"146\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"36\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"40\" y=\"32\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"220\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"40\" y=\"105.0\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"end\">a</text><text x=\"130.0\" y=\"194\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">b</text><text x=\"137.2\" y=\"94.4\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\">c (hypotenuse)</text><path d=\"M 184.0,160.0 A 26,26 0 0 1 189.2,144.4\" fill=\"none\" stroke=\"#1a6b6b\" stroke-width=\"2.5\"/><text x=\"164.5\" y=\"148.8\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"middle\"></text><path d=\"M 50.0,66.0 A 26,26 0 0 0 70.8,55.6\" fill=\"none\" stroke=\"#1a6b6b\" stroke-width=\"2.5\"/><text x=\"72.4\" y=\"88.7\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"middle\"></text><text x=\"70\" y=\"138\" font-size=\"11\" fill=\"#0a3f52\" font-weight=\"600\">right angle</text></svg></div><p class=\"graph-caption\">Every triangle on this page is a right triangle: the right angle is always at vertex C, and the hypotenuse c is the longest side, directly across from it. \"Solving\" means finding all six parts — three sides and three angles.</p>"
+    },
+    {
+      "id": "faq-2",
+      "category": "conceptual",
+      "question": "How do I know which trig ratio (sine, cosine, or tangent) to use for a given problem?",
+      "answer": "Identify which two sides — relative to the angle you care about — are actually involved in the problem (the ones you know, plus the one you're solving for), then match that pair to the right ratio using SOH-CAH-TOA.<div class=\"graph-wrap\"><svg viewBox=\"0 0 415 215\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"125,160 125,40 285,160\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"125\" y=\"146\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"111\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"115\" y=\"32\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"295\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"115\" y=\"105.0\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"end\">a (opposite A)</text><text x=\"205.0\" y=\"194\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"middle\">b (adjacent to A)</text><text x=\"212.2\" y=\"94.4\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\">c (hypotenuse)</text><path d=\"M 259.0,160.0 A 26,26 0 0 1 264.2,144.4\" fill=\"none\" stroke=\"#1a6b6b\" stroke-width=\"2.5\"/><text x=\"239.5\" y=\"148.8\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"middle\"></text><text x=\"145\" y=\"138\" font-size=\"11\" fill=\"#0a3f52\" font-weight=\"600\">90°</text></svg></div><p class=\"graph-caption\">Right triangle ABC with the right angle at C. Relative to angle A: side a is opposite, side b is adjacent, and side c (the hypotenuse) is always across from the right angle.</p><div class=\"example-box\"><div class=\"label\">SOH-CAH-TOA (relative to angle A)</div><p class=\"math-line\">\\( \\sin(A) = \\dfrac{\\text{opposite}}{\\text{hypotenuse}} = \\dfrac{a}{c} \\)</p><p class=\"math-line\">\\( \\cos(A) = \\dfrac{\\text{adjacent}}{\\text{hypotenuse}} = \\dfrac{b}{c} \\)</p><p class=\"math-line\">\\( \\tan(A) = \\dfrac{\\text{opposite}}{\\text{adjacent}} = \\dfrac{a}{b} \\)</p></div>"
+    },
+    {
+      "id": "faq-3",
+      "category": "conceptual",
+      "question": "Why do the two acute angles in a right triangle always add up to 90°?",
+      "answer": "Every triangle's three angles add up to 180° total. Since a right triangle already uses up 90° on its right angle, the remaining two angles have no choice but to split the other 90° between them — whatever isn't used by one acute angle belongs entirely to the other.<div class=\"graph-wrap\"><svg viewBox=\"0 0 320 245\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"50,160 50,40 210,160\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"50\" y=\"146\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"36\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"40\" y=\"32\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"220\" y=\"178\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"40\" y=\"105.0\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"end\">a</text><text x=\"130.0\" y=\"194\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">b</text><text x=\"137.2\" y=\"94.4\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\">c</text><path d=\"M 184.0,160.0 A 26,26 0 0 1 189.2,144.4\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"164.5\" y=\"148.8\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"middle\"></text><path d=\"M 50.0,66.0 A 26,26 0 0 0 70.8,55.6\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"72.4\" y=\"88.7\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"middle\"></text><text x=\"70\" y=\"138\" font-size=\"11\" fill=\"#0a3f52\" font-weight=\"600\">90°</text><text x=\"130\" y=\"226\" font-size=\"14\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"middle\">A + B = 90°</text></svg></div><p class=\"graph-caption\">The three angles add to 180°. The right angle at C uses 90°, so the two acute angles A and B share the remaining 90°.</p>"
+    },
+    {
+      "id": "faq-4",
+      "category": "conceptual",
+      "question": "When do I use an inverse trig function versus a regular trig function while solving a triangle?",
+      "answer": "Use a regular trig function (sin, cos, tan) when you already know an angle and are solving for a missing SIDE. Use an inverse trig function (PF3's arcsin, arccos, arctan) when you already know two sides and are solving for a missing ANGLE — since the inverse function is exactly the tool that \"undoes\" the ratio and hands back the angle itself."
+    },
+    {
+      "id": "faq-5",
+      "category": "sticking-points",
+      "question": "How do I find a missing angle when I'm given all three side lengths?",
+      "answer": "Pick any acute angle, write the trig ratio (SOH-CAH-TOA) using the two relevant known sides, then apply the matching inverse trig function to solve for the angle itself.<div class=\"graph-wrap\"><svg viewBox=\"0 0 225 232\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"75,177.0 75,30.0 125.4,177.0\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"75\" y=\"163.0\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"61\" y=\"195.0\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"65\" y=\"22.0\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"135.4\" y=\"195.0\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"65\" y=\"108.5\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"end\">a = 35</text><text x=\"100.2\" y=\"211.0\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">b = 12</text><text x=\"111.6\" y=\"103.6\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\">c = 37</text><path d=\"M 99.4,177.0 A 26,26 0 0 1 117.0,152.4\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"137.4\" y=\"153.0\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"start\">A = ?</text></svg></div><p class=\"graph-caption\">Right triangle ABC (right angle at C) with all three sides known. Angle A is the unknown — solved with the inverse sine.</p><div class=\"example-box\"><div class=\"label\">Worked Example — right triangle ABC, right angle at C</div><p class=\"math-line\">Triangle ABC: \\( a=35 \\), \\( b=12 \\), \\( c=37 \\) (hypotenuse). Find angle A.</p><p class=\"math-line\">\\( \\sin(A)=\\dfrac{35}{37} \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( A=\\arcsin\\left(\\dfrac{35}{37}\\right)\\approx 71.1° \\)</p></div>"
+    },
+    {
+      "id": "faq-6",
+      "category": "sticking-points",
+      "question": "How do I find the missing sides when I'm given one angle and the hypotenuse?",
+      "answer": "Use sine to find the side opposite your known angle, and cosine to find the side adjacent to it — both ratios use the hypotenuse directly, so no extra steps are needed.<div class=\"graph-wrap\"><svg viewBox=\"0 0 335 215\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"75,160.36300463040968 75,40.0 234.72710200945858,160.36300463040968\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"75\" y=\"146.36300463040968\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"61\" y=\"178.36300463040968\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"65\" y=\"32.0\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"244.72710200945858\" y=\"178.36300463040968\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"65\" y=\"105.18150231520484\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"end\">a = ?</text><text x=\"154.8635510047293\" y=\"194.36300463040968\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"middle\">b = ?</text><text x=\"162.1\" y=\"94.6\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\">c = 5 m</text><path d=\"M 208.7,160.4 A 26,26 0 0 1 214.0,144.7\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"246.7\" y=\"136.4\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"start\">A = ?</text><path d=\"M 75.0,66.0 A 26,26 0 0 0 95.8,55.6\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><text x=\"97.3\" y=\"88.7\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">53°</text></svg></div><p class=\"graph-caption\">Right triangle ABC (right angle at C): known angle B = 53° and hypotenuse c = 5 m. Sides a and b (and angle A) are unknown.</p><div class=\"example-box\"><div class=\"label\">Worked Example — right triangle ABC, right angle at C</div><p class=\"math-line\">Triangle ABC: \\( B=53° \\), \\( c=5 \\) meters (hypotenuse). Find sides a and b.</p><p class=\"math-line\">\\( \\sin(53°)=\\dfrac{b}{5} \\) &rarr; \\( b=5\\sin(53°)\\approx 4 \\) meters</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\cos(53°)=\\dfrac{a}{5} \\) &rarr; \\( a=5\\cos(53°)\\approx 3 \\) meters</p></div>"
+    },
+    {
+      "id": "faq-7",
+      "category": "sticking-points",
+      "question": "How do I find the missing sides when I'm given one angle and one leg (not the hypotenuse)?",
+      "answer": "Use tangent to find the other leg directly (since tangent doesn't involve the hypotenuse at all), then use sine or cosine — or the Pythagorean theorem — to find the hypotenuse afterward.<div class=\"graph-wrap\"><svg viewBox=\"0 0 361 188\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"75,133.47451808608798 75,40.000000000000014 250.8,133.47451808608798\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"75\" y=\"119.47451808608798\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"61\" y=\"151.47451808608798\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"65\" y=\"32.000000000000014\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"260.8\" y=\"151.47451808608798\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"65\" y=\"91.73725904304399\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"end\">a = ?</text><text x=\"162.9\" y=\"167.47451808608798\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">b = 29.3 mi</text><text x=\"168.5\" y=\"80.1\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\">c = ?</text><path d=\"M 224.8,133.5 A 26,26 0 0 1 227.8,121.3\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><text x=\"262.8\" y=\"109.5\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"start\">A = 28°</text><path d=\"M 75.0,66.0 A 26,26 0 0 0 98.0,52.2\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><text x=\"100.8\" y=\"86.9\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\" text-anchor=\"middle\">B = ?</text></svg></div><p class=\"graph-caption\">Right triangle ABC (right angle at C): known angle A = 28° and leg b = 29.3 mi (a leg, not the hypotenuse). Side a, hypotenuse c, and angle B are unknown.</p><div class=\"example-box\"><div class=\"label\">Worked Example — right triangle ABC, right angle at C</div><p class=\"math-line\">Triangle ABC: \\( A=28° \\), \\( b=29.3 \\) miles. Find side a and the hypotenuse c.</p><p class=\"math-line\">\\( \\tan(28°)=\\dfrac{a}{29.3} \\) &rarr; \\( a=29.3\\tan(28°)\\approx 15.6 \\) miles</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\cos(28°)=\\dfrac{29.3}{c} \\) &rarr; \\( c=\\dfrac{29.3}{\\cos(28°)}\\approx 33.2 \\) miles</p></div>"
+    },
+    {
+      "id": "faq-8",
+      "category": "sticking-points",
+      "question": "How do I decide whether to use a trig ratio or the Pythagorean theorem to find a missing side?",
+      "answer": "Use the Pythagorean theorem only when you already know TWO of the three sides and need the third — it doesn't involve angles at all. Use a trig ratio whenever an angle is part of what you know or need, since the Pythagorean theorem has no way to bring an angle measure into the picture."
+    },
+    {
+      "id": "faq-9",
+      "category": "sticking-points",
+      "question": "How do I find the second acute angle once I already know the first one?",
+      "answer": "Subtract the known acute angle from 90° (faq-3) — no trig ratio needed for this step at all, just simple subtraction.<div class=\"graph-wrap\"><svg viewBox=\"0 0 405 215\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><polygon points=\"75,160.36300463040968 75,40.0 234.72710200945858,160.36300463040968\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"3\"/><rect x=\"75\" y=\"146.36300463040968\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"61\" y=\"178.36300463040968\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">C</text><text x=\"65\" y=\"32.0\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"end\">B</text><text x=\"244.72710200945858\" y=\"178.36300463040968\" font-size=\"14\" fill=\"#1a6b6b\" font-weight=\"700\">A</text><text x=\"65\" y=\"105.18150231520484\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"end\">a</text><text x=\"154.8635510047293\" y=\"194.36300463040968\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">b</text><text x=\"162.1\" y=\"94.6\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\">c</text><path d=\"M 208.7,160.4 A 26,26 0 0 1 214.0,144.7\" fill=\"none\" stroke=\"#1a6b6b\" stroke-width=\"2.5\"/><text x=\"246.7\" y=\"136.4\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\" text-anchor=\"start\">A = 90° − 53° = 37°</text><path d=\"M 75.0,66.0 A 26,26 0 0 0 95.8,55.6\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><text x=\"97.3\" y=\"88.7\" font-size=\"13\" fill=\"#0a3f52\" font-weight=\"700\" text-anchor=\"middle\">53°</text></svg></div><p class=\"graph-caption\">With B = 53° known, the other acute angle needs no trig at all — just subtract from 90°.</p><div class=\"example-box\"><div class=\"label\">Worked Example — right triangle ABC, right angle at C</div><p class=\"math-line\">If \\( B=53° \\), then \\( A=90°-53°=37° \\).</p></div>"
+    },
+    {
+      "id": "faq-10",
+      "category": "sticking-points",
+      "question": "How do I round to the correct number of decimal places when solving a triangle?",
+      "answer": "Unless a problem specifies otherwise, round side lengths to one decimal place and angle measures to the nearest whole degree — enough precision to be useful without implying more accuracy than the original measurements support. Keep extra decimal places in your calculator throughout the problem, and only round your very last, final answers — rounding too early can cause small errors to snowball through later steps."
+    },
+    {
+      "id": "faq-11",
+      "category": "connections",
+      "question": "How does solving right triangles connect to PF3's inverse trig functions?",
+      "answer": "Every \"find the missing angle\" step in this section is literally PF3's arcsin, arccos, and arctan put to direct use. PF3 taught you those functions somewhat abstractly — evaluate this, find that domain — and this section is the first place you actually need them to solve a real, concrete problem, using a physical triangle instead of just an equation."
+    },
+    {
+      "id": "faq-12",
+      "category": "connections",
+      "question": "How does this connect to TR3's original right-triangle trig definitions?",
+      "answer": "TR3 defined sine, cosine, and tangent as ratios of a right triangle's sides in the first place — opposite over hypotenuse, adjacent over hypotenuse, opposite over adjacent. This section is simply that same definition, now used in the opposite direction: instead of being handed an angle and computing a ratio, you're handed some sides and solving for the angle (or handed an angle and some sides and solving for the rest)."
+    },
+    {
+      "id": "faq-13",
+      "category": "connections",
+      "question": "Why does solving right triangles matter beyond this course?",
+      "answer": "This is one of the most directly practical skills in all of trigonometry — surveying, navigation, construction, and physics all rely constantly on finding an unknown side or angle of a right triangle from partial information. It's also the essential foundation for TE5's Law of Sines and Law of Cosines, which extend this exact same \"solve for everything\" idea to triangles that aren't right triangles at all."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "Solve a Right Triangle Given an Angle and the Hypotenuse",
+      "url": "https://www.youtube.com/watch?v=rbokZWrwCJE",
+      "description": "Solving a right triangle given one angle and the hypotenuse, finding both missing sides and the second acute angle.",
+      "category": "solving-triangles",
+      "relatedFaqs": [
+        "faq-6",
+        "faq-9"
+      ]
+    }
+  ],
+  "apps": [],
+  "prompts": {
+    "guided": [
+      {
+        "id": "prompt-1",
+        "title": "Practice Choosing the Right Trig Ratio",
+        "prompt": "I'm learning to solve right triangles. Give me a right triangle with one known angle and one known side, and ask me to identify which two sides are involved (relative to that angle), then pick the correct trig ratio (SOH-CAH-TOA) before solving. Give me a few more practice problems with different combinations of given sides and check my reasoning."
+      },
+      {
+        "id": "prompt-2",
+        "title": "Practice Finding a Missing Angle from Three Sides",
+        "prompt": "I'm learning to find a missing angle when given all three sides of a right triangle. Give me a triangle like this and walk me through setting up the correct trig ratio, then applying the matching inverse trig function to solve for the angle. Give me more practice problems and check my work."
+      },
+      {
+        "id": "prompt-3",
+        "title": "Practice Solving a Full Triangle",
+        "prompt": "I'm learning to solve an entire right triangle — finding every missing side and angle — starting from just one angle and one side. Give me a triangle like this and walk me through the full process: find the missing sides using the right trig ratios, then find the second acute angle. Give me a few more full triangles to solve and check my work at each step."
+      },
+      {
+        "id": "prompt-4",
+        "title": "Practice Deciding Between Trig Ratios and the Pythagorean Theorem",
+        "prompt": "I sometimes get confused about when to use a trig ratio versus the Pythagorean theorem while solving a right triangle. Give me a few different triangle scenarios — some where I'm given two sides, some where I'm given an angle and a side — and ask me to identify which tool I'd use before I actually solve anything. Check my reasoning."
+      },
+      {
+        "id": "prompt-5",
+        "title": "Connect This to PF3 and TR3",
+        "prompt": "I've learned right-triangle trig definitions in TR3 and inverse trig functions in PF3. Now I'm using both together to solve right triangles in TE4. Can you help me see exactly how these two earlier skills combine here — when am I using TR3's original ratios, and when am I using PF3's inverse functions?"
+      }
+    ],
+    "open": [
+      {
+        "id": "open-1",
+        "title": "Create Your Own",
+        "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section TE4 (Solving Right Triangles). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
+      }
+    ]
+  },
+  "paths": [
+    {
+      "id": "TE4",
+      "label": "TE4: Solving Right Triangles",
+      "sectionLabel": "TE4, Solving Right Triangles",
+      "intro": "Builds to the TE4 check: solving right triangles given an angle and a side, or two sides, plus angle-of-elevation applications.",
+      "graphs": {
+        "LBL": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Right triangle ABC with the right angle at C. Side a is across from angle A, side b is across from angle B, and the hypotenuse c is across from the right angle.\"><polygon class=\"g-tri\" points=\"80,195 306.7,195 80,25.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"312.7\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"21.0\">B</text><text class=\"tri-val\" x=\"193.3\" y=\"213\" text-anchor=\"middle\">b = opp. B</text><text class=\"tri-val\" x=\"72\" y=\"114.0\" text-anchor=\"end\">a = opp. A</text><text class=\"tri-val\" x=\"203.3\" y=\"104.0\">c = hyp.</text><text class=\"tri-val\" x=\"261.7\" y=\"184.0\" text-anchor=\"middle\">A</text><text class=\"tri-val\" x=\"95.2\" y=\"59.4\" text-anchor=\"middle\">B</text></svg></div>",
+        "T512": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Right triangle with a = 5, b = 12, c = 13.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,99.2\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"95.2\">B</text><text class=\"tri-val\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = 12</text><text class=\"tri-val\" x=\"72\" y=\"151.1\" text-anchor=\"end\">a = 5</text><text class=\"tri-val\" x=\"205.0\" y=\"141.1\">c = 13</text><text class=\"tri-find\" x=\"235.0\" y=\"184.0\" text-anchor=\"middle\">?</text><text class=\"tri-find\" x=\"98.9\" y=\"131.5\" text-anchor=\"middle\">?</text></svg></div>",
+        "T2q": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Right triangle with angle A = 35 degrees and hypotenuse c = 10; a, b, and B are unknown.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,34.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"30.0\">B</text><text class=\"tri-find\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = ?</text><text class=\"tri-find\" x=\"72\" y=\"118.5\" text-anchor=\"end\">a = ?</text><text class=\"tri-given\" x=\"205.0\" y=\"108.5\">c = 10</text><text class=\"tri-given\" x=\"262.4\" y=\"184.0\" text-anchor=\"middle\">35°</text><text class=\"tri-find\" x=\"95.7\" y=\"68.1\" text-anchor=\"middle\">?</text></svg></div>",
+        "T2s": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Solved triangle: A = 35, B = 55, a about 5.7, b about 8.2, c = 10.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,34.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"30.0\">B</text><text class=\"tri-val\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = 8.2</text><text class=\"tri-val\" x=\"72\" y=\"118.5\" text-anchor=\"end\">a = 5.7</text><text class=\"tri-given\" x=\"205.0\" y=\"108.5\">c = 10</text><text class=\"tri-given\" x=\"262.4\" y=\"184.0\" text-anchor=\"middle\">35°</text><text class=\"tri-val\" x=\"95.7\" y=\"68.1\" text-anchor=\"middle\">55°</text></svg></div>",
+        "T3q": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Right triangle with legs a = 8 and b = 15; c, A, and B unknown.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,72.3\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"68.3\">B</text><text class=\"tri-given\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = 15</text><text class=\"tri-given\" x=\"72\" y=\"137.7\" text-anchor=\"end\">a = 8</text><text class=\"tri-find\" x=\"205.0\" y=\"127.7\">c = ?</text><text class=\"tri-find\" x=\"250.0\" y=\"184.0\" text-anchor=\"middle\">?</text><text class=\"tri-find\" x=\"97.5\" y=\"105.5\" text-anchor=\"middle\">?</text></svg></div>",
+        "T3s": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Solved triangle: a = 8, b = 15, c = 17, A about 28.1 degrees, B about 61.9 degrees.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,72.3\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"68.3\">B</text><text class=\"tri-given\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = 15</text><text class=\"tri-given\" x=\"72\" y=\"137.7\" text-anchor=\"end\">a = 8</text><text class=\"tri-val\" x=\"205.0\" y=\"127.7\">c = 17</text><text class=\"tri-val\" x=\"250.0\" y=\"184.0\" text-anchor=\"middle\">28.1°</text><text class=\"tri-val\" x=\"97.5\" y=\"105.5\" text-anchor=\"middle\">61.9°</text></svg></div>",
+        "T4q": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Right triangle with A = 50 degrees and b = 8.\"><polygon class=\"g-tri\" points=\"80,195 222.6,195 80,25.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"228.6\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"21.0\">B</text><text class=\"tri-given\" x=\"151.3\" y=\"213\" text-anchor=\"middle\">b = 8</text><text class=\"tri-find\" x=\"72\" y=\"114.0\" text-anchor=\"end\">a = ?</text><text class=\"tri-find\" x=\"161.3\" y=\"104.0\">c = ?</text><text class=\"tri-given\" x=\"190.5\" y=\"184.0\" text-anchor=\"middle\">50°</text><text class=\"tri-find\" x=\"95.0\" y=\"70.2\" text-anchor=\"middle\">?</text></svg></div>",
+        "T4s": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Solved triangle: A = 50, B = 40, a about 9.5, b = 8, c about 12.4.\"><polygon class=\"g-tri\" points=\"80,195 222.6,195 80,25.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"228.6\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"21.0\">B</text><text class=\"tri-given\" x=\"151.3\" y=\"213\" text-anchor=\"middle\">b = 8</text><text class=\"tri-val\" x=\"72\" y=\"114.0\" text-anchor=\"end\">a = 9.5</text><text class=\"tri-val\" x=\"161.3\" y=\"104.0\">c = 12.4</text><text class=\"tri-given\" x=\"190.5\" y=\"184.0\" text-anchor=\"middle\">50°</text><text class=\"tri-val\" x=\"95.0\" y=\"70.2\" text-anchor=\"middle\">40°</text></svg></div>",
+        "F1s": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Solved triangle: A = 65, B = 25, a about 10.9, b about 5.1, c = 12.\"><polygon class=\"g-tri\" points=\"80,195 159.3,195 80,25.0\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"165.3\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"21.0\">B</text><text class=\"tri-val\" x=\"119.6\" y=\"213\" text-anchor=\"middle\">b = 5.1</text><text class=\"tri-val\" x=\"72\" y=\"114.0\" text-anchor=\"end\">a = 10.9</text><text class=\"tri-given\" x=\"129.6\" y=\"104.0\">c = 12</text><text class=\"tri-val\" x=\"130.6\" y=\"180.7\" text-anchor=\"middle\">65°</text><text class=\"tri-given\" x=\"95.0\" y=\"96.7\" text-anchor=\"middle\">25°</text></svg></div>",
+        "F2s": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 340 230\" width=\"340\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Solved triangle: a = 7, b = 24, c = 25, A about 16.3, B about 73.7.\"><polygon class=\"g-tri\" points=\"80,195 310.0,195 80,127.9\"/><polyline class=\"g-rightbox\" points=\"80,183 92,183 92,195\"/><text class=\"tri-v\" x=\"66\" y=\"211\">C</text><text class=\"tri-v\" x=\"316.0\" y=\"211\">A</text><text class=\"tri-v\" x=\"64\" y=\"123.9\">B</text><text class=\"tri-given\" x=\"195.0\" y=\"213\" text-anchor=\"middle\">b = 24</text><text class=\"tri-given\" x=\"72\" y=\"165.5\" text-anchor=\"end\">a = 7</text><text class=\"tri-val\" x=\"205.0\" y=\"155.5\">c = 25</text><text class=\"tri-val\" x=\"225.9\" y=\"187.0\" text-anchor=\"middle\">16.3°</text><text class=\"tri-val\" x=\"100.4\" y=\"159.1\" text-anchor=\"middle\">73.7°</text></svg></div>",
+        "S2": "<div class=\"table-wrap\"><table class=\"lookup steps\"><tr><th scope=\"col\">Find</th><th scope=\"col\">Work</th><th scope=\"col\">Tool</th></tr><tr><td>\\(B\\)</td><td>\\(90^\\circ - 35^\\circ = 55^\\circ\\)</td><td><span class=\"pr-badge pr-prod\">Angle sum</span></td></tr><tr><td>\\(a\\)</td><td>\\(\\sin 35^\\circ = \\tfrac{a}{10} \\Rightarrow a = 10\\sin 35^\\circ \\approx 5.7\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr><tr><td>\\(b\\)</td><td>\\(\\cos 35^\\circ = \\tfrac{b}{10} \\Rightarrow b = 10\\cos 35^\\circ \\approx 8.2\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr></table></div>",
+        "S3": "<div class=\"table-wrap\"><table class=\"lookup steps\"><tr><th scope=\"col\">Find</th><th scope=\"col\">Work</th><th scope=\"col\">Tool</th></tr><tr><td>\\(c\\)</td><td>\\(\\sqrt{8^2 + 15^2} = \\sqrt{289} = 17\\)</td><td><span class=\"pr-badge pr-start\">Pythagorean</span></td></tr><tr><td>\\(A\\)</td><td>\\(\\tan A = \\tfrac{8}{15} \\Rightarrow A = \\tan^{-1}\\left(\\tfrac{8}{15}\\right) \\approx 28.1^\\circ\\)</td><td><span class=\"pr-badge pr-quot\">Inverse trig</span></td></tr><tr><td>\\(B\\)</td><td>\\(90^\\circ - 28.1^\\circ = 61.9^\\circ\\)</td><td><span class=\"pr-badge pr-prod\">Angle sum</span></td></tr></table></div>",
+        "S4": "<div class=\"table-wrap\"><table class=\"lookup steps\"><tr><th scope=\"col\">Find</th><th scope=\"col\">Work</th><th scope=\"col\">Tool</th></tr><tr><td>\\(B\\)</td><td>\\(90^\\circ - 50^\\circ = 40^\\circ\\)</td><td><span class=\"pr-badge pr-prod\">Angle sum</span></td></tr><tr><td>\\(a\\)</td><td>\\(\\tan 50^\\circ = \\tfrac{a}{8} \\Rightarrow a = 8\\tan 50^\\circ \\approx 9.5\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr><tr><td>\\(c\\)</td><td>\\(\\cos 50^\\circ = \\tfrac{8}{c} \\Rightarrow c = \\tfrac{8}{\\cos 50^\\circ} \\approx 12.4\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr></table></div>",
+        "SF1": "<div class=\"table-wrap\"><table class=\"lookup steps\"><tr><th scope=\"col\">Find</th><th scope=\"col\">Work</th><th scope=\"col\">Tool</th></tr><tr><td>\\(A\\)</td><td>\\(90^\\circ - 25^\\circ = 65^\\circ\\)</td><td><span class=\"pr-badge pr-prod\">Angle sum</span></td></tr><tr><td>\\(b\\)</td><td>\\(\\sin 25^\\circ = \\tfrac{b}{12} \\Rightarrow b \\approx 5.1\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr><tr><td>\\(a\\)</td><td>\\(\\cos 25^\\circ = \\tfrac{a}{12} \\Rightarrow a \\approx 10.9\\)</td><td><span class=\"pr-badge pr-pow\">SOH-CAH-TOA</span></td></tr></table></div>",
+        "SF2": "<div class=\"table-wrap\"><table class=\"lookup steps\"><tr><th scope=\"col\">Find</th><th scope=\"col\">Work</th><th scope=\"col\">Tool</th></tr><tr><td>\\(c\\)</td><td>\\(\\sqrt{7^2 + 24^2} = 25\\)</td><td><span class=\"pr-badge pr-start\">Pythagorean</span></td></tr><tr><td>\\(A\\)</td><td>\\(\\tan^{-1}\\left(\\tfrac{7}{24}\\right) \\approx 16.3^\\circ\\)</td><td><span class=\"pr-badge pr-quot\">Inverse trig</span></td></tr><tr><td>\\(B\\)</td><td>\\(90^\\circ - 16.3^\\circ = 73.7^\\circ\\)</td><td><span class=\"pr-badge pr-prod\">Angle sum</span></td></tr></table></div>"
+      },
+      "stages": [
+        {
+          "stage": "Get ready",
+          "desc": "Two quick reviews TE4 leans on: triangle labels and SOH-CAH-TOA (TR5), and inverse trig on a calculator (PF3). Skip any you already have.",
+          "stops": [
+            {
+              "id": "te4-g1",
+              "title": "Label the triangle",
+              "target": "In right triangle \\(ABC\\) with \\(C = 90^\\circ\\): side \\(a\\) is across from angle \\(A\\), side \\(b\\) is across from angle \\(B\\), and the hypotenuse \\(c\\) is across from the right angle. From angle \\(A\\), side \\(a\\) is <em>opposite</em> and side \\(b\\) is <em>adjacent</em>.",
+              "cold": "From angle \\(A\\), which side is opposite, which is adjacent, and which is the hypotenuse? From angle \\(B\\)?[[graph:LBL]]",
+              "coldPlain": "In right triangle ABC with C = 90 degrees, from angle A which side is opposite, adjacent, and the hypotenuse? From angle B?",
+              "coldA": "From \\(A\\): opposite \\(a\\), adjacent \\(b\\), hypotenuse \\(c\\). From \\(B\\): opposite \\(b\\), adjacent \\(a\\), hypotenuse \\(c\\). Opposite and adjacent swap when you change angles; the hypotenuse never does.",
+              "solution": "Lowercase letters name the side across from the matching capital-letter angle. Stand at angle A: the side across is a (opposite), the leg touching A is b (adjacent). Stand at B and they swap.",
+              "mistake": "Calling the hypotenuse \"adjacent\" because it touches the angle.",
+              "again": "In a right triangle with \\(a = 5\\), \\(b = 12\\), \\(c = 13\\), find \\(\\sin A\\), \\(\\cos A\\), \\(\\tan A\\), and \\(\\sin B\\).[[graph:T512]]",
+              "againA": "\\(\\sin A = \\tfrac{5}{13}\\), \\(\\cos A = \\tfrac{12}{13}\\), \\(\\tan A = \\tfrac{5}{12}\\), \\(\\sin B = \\tfrac{12}{13}\\) (same as \\(\\cos A\\)).",
+              "reflect": "Why is \\(\\sin A\\) always equal to \\(\\cos B\\) in a right triangle?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                }
+              ]
+            },
+            {
+              "id": "te4-g2",
+              "title": "Calculator: trig and inverse trig in degrees",
+              "target": "Make sure your calculator is in <strong>degree</strong> mode. Use \\(\\sin\\), \\(\\cos\\), \\(\\tan\\) to go from an angle to a ratio, and \\(\\sin^{-1}\\), \\(\\cos^{-1}\\), \\(\\tan^{-1}\\) to go from a ratio back to an angle.",
+              "cold": "Find \\(\\sin 35^\\circ\\) to four decimals. Then find the angle \\(\\theta\\) with \\(\\sin\\theta = 0.6\\), to the nearest tenth of a degree.",
+              "coldPlain": "Find sin 35 degrees to four decimals. Then find theta with sin theta = 0.6, to the nearest tenth of a degree.",
+              "coldA": "\\(\\sin 35^\\circ \\approx 0.5736\\). \\(\\theta = \\sin^{-1}(0.6) \\approx 36.9^\\circ\\).",
+              "solution": "In degree mode, sin 35 = 0.5736. To undo sine, use inverse sine: sin^(-1)(0.6) is about 36.87, which rounds to 36.9 degrees.",
+              "mistake": "Leaving the calculator in radian mode (sin 35 would come out about -0.4282).",
+              "again": "Find \\(\\tan 62^\\circ\\) and \\(\\cos^{-1}(0.25)\\).",
+              "againA": "\\(\\tan 62^\\circ \\approx 1.8807\\). \\(\\cos^{-1}(0.25) \\approx 75.5^\\circ\\).",
+              "reflect": "How can you tell your calculator is in the wrong mode?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Learn the skills",
+          "desc": "The two kinds of TE4 problem (given an angle and a side, or given two sides), then the full solve and applications.",
+          "stops": [
+            {
+              "id": "te4-t1",
+              "title": "Missing sides from an angle and a side",
+              "target": "Pick the ratio that uses the angle you know, the side you know, and the side you want: \\(\\sin = \\tfrac{\\text{opp}}{\\text{hyp}}\\), \\(\\cos = \\tfrac{\\text{adj}}{\\text{hyp}}\\), \\(\\tan = \\tfrac{\\text{opp}}{\\text{adj}}\\). Then solve.",
+              "cold": "In triangle \\(ABC\\), \\(C = 90^\\circ\\), \\(A = 35^\\circ\\), and \\(c = 10\\). Find \\(a\\), \\(b\\), and \\(B\\). Round sides to the nearest tenth.[[graph:T2q]]",
+              "coldPlain": "In triangle ABC, C = 90 degrees, A = 35 degrees, c = 10. Find a, b, and B. Round sides to the nearest tenth.",
+              "note": "Show which ratio (sin, cos, or tan) you set up for each missing part and why, and check that all three angles add to 180 degrees.",
+              "coldA": "[[graph:S2]][[graph:T2s]]",
+              "solution": "B = 90 - 35 = 55 degrees. From A, a is opposite and c is the hypotenuse, so sin 35 = a/10 and a = 10 sin 35, about 5.7. b is adjacent, so cos 35 = b/10 and b is about 8.2. Check: 5.7^2 + 8.2^2 is about 100.",
+              "mistake": "Using tan when the hypotenuse is the known side.",
+              "again": "\\(C = 90^\\circ\\), \\(B = 62^\\circ\\), and \\(a = 7\\). Find \\(b\\) and \\(c\\).",
+              "againA": "From \\(B\\), \\(a\\) is adjacent. \\(\\tan 62^\\circ = \\tfrac{b}{7}\\), so \\(b \\approx 13.2\\). \\(\\cos 62^\\circ = \\tfrac{7}{c}\\), so \\(c = \\tfrac{7}{\\cos 62^\\circ} \\approx 14.9\\). (When the unknown is in the denominator, you divide.)",
+              "reflect": "How do you decide between sin, cos, and tan?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "te4-t2",
+              "title": "Missing angles from two sides",
+              "target": "With two sides, use the Pythagorean Theorem for the third side and inverse trig for an angle: \\(\\tan A = \\tfrac{a}{b}\\) gives \\(A = \\tan^{-1}\\left(\\tfrac{a}{b}\\right)\\).",
+              "cold": "\\(C = 90^\\circ\\), \\(a = 8\\), \\(b = 15\\). Find \\(c\\), \\(A\\), and \\(B\\). Round angles to the nearest tenth of a degree.[[graph:T3q]]",
+              "coldPlain": "C = 90 degrees, a = 8, b = 15. Find c, A, and B. Round angles to the nearest tenth of a degree.",
+              "note": "Show which ratio (sin, cos, or tan) you set up for each missing part and why, and check that all three angles add to 180 degrees.",
+              "coldA": "[[graph:S3]][[graph:T3s]]",
+              "solution": "c = sqrt(64 + 225) = 17. From A, a = 8 is opposite and b = 15 is adjacent, so tan A = 8/15 and A = tan^(-1)(8/15), about 28.1 degrees. B = 90 - 28.1 = 61.9 degrees.",
+              "mistake": "Using tan(8/15) instead of tan^(-1)(8/15).",
+              "again": "\\(C = 90^\\circ\\), \\(a = 9\\), \\(c = 41\\). Find \\(b\\), \\(A\\), and \\(B\\).",
+              "againA": "\\(b = \\sqrt{41^2 - 9^2} = 40\\). \\(\\sin A = \\tfrac{9}{41}\\), so \\(A \\approx 12.7^\\circ\\) and \\(B \\approx 77.3^\\circ\\).",
+              "reflect": "Why do you need an inverse trig function here but not in the previous stop?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "te4-t3",
+              "title": "Solve the whole triangle",
+              "target": "Solve means find every missing side and angle. A good order: the other acute angle (they add to 90°), then sides with trig or the Pythagorean Theorem, then check.",
+              "cold": "Solve triangle \\(ABC\\) with \\(C = 90^\\circ\\), \\(A = 50^\\circ\\), and \\(b = 8\\). Round sides to the nearest tenth.[[graph:T4q]]",
+              "coldPlain": "Solve triangle ABC with C = 90 degrees, A = 50 degrees, b = 8. Round sides to the nearest tenth.",
+              "note": "Show which ratio (sin, cos, or tan) you set up for each missing part and why, and check that all three angles add to 180 degrees.",
+              "coldA": "[[graph:S4]][[graph:T4s]]",
+              "solution": "B = 40 degrees. From A, b = 8 is adjacent. tan 50 = a/8, so a is about 9.5. cos 50 = 8/c, so c = 8/cos 50, about 12.4. Check: 9.5^2 + 8^2 is about 154, and 12.4^2 is about 154.",
+              "mistake": "Rounding a early and then using the rounded value to find c.",
+              "again": "Solve the triangle with \\(C = 90^\\circ\\), \\(b = 20\\), \\(c = 29\\).",
+              "againA": "\\(a = \\sqrt{29^2 - 20^2} = 21\\). \\(\\cos A = \\tfrac{20}{29}\\), so \\(A \\approx 46.4^\\circ\\), \\(B \\approx 43.6^\\circ\\).",
+              "reflect": "How can you check a solved triangle without redoing the work?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "te4-t4",
+              "title": "Applications: angles of elevation",
+              "target": "Draw the right triangle hiding in the situation, label what you know, then solve it like any other right triangle.",
+              "cold": "A 20-foot ladder leans against a wall, making a \\(72^\\circ\\) angle with the ground. How high up the wall does it reach?",
+              "coldPlain": "A 20-foot ladder leans against a wall, making a 72 degree angle with the ground. How high up the wall does it reach?",
+              "coldA": "The ladder is the hypotenuse; the height is opposite the \\(72^\\circ\\) angle: \\(h = 20\\sin 72^\\circ \\approx 19.0\\) feet.",
+              "solution": "Sketch: ground, wall, ladder. The ladder (20) is the hypotenuse and the height is opposite the 72 degree angle at the ground, so sin 72 = h/20 and h is about 19.0 feet.",
+              "mistake": "Using cos 72 (that gives the distance from the wall).",
+              "again": "You stand 80 feet from a 50-foot building. What is the angle of elevation to the top?",
+              "againA": "\\(\\tan\\theta = \\tfrac{50}{80}\\), so \\(\\theta = \\tan^{-1}(0.625) \\approx 32.0^\\circ\\).",
+              "reflect": "What is the first thing you do with a word problem like this?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Put it together",
+          "desc": "A practice check in the same format as the TE4 CheckIt: solve a right triangle given an angle and a side, and one given two sides.",
+          "stops": [
+            {
+              "id": "te4-f1",
+              "title": "Practice check",
+              "target": "Solve right triangles, finding all remaining sides and angles with the requested rounding.",
+              "cold": "(1) In triangle \\(ABC\\), \\(C = 90^\\circ\\), \\(B = 25^\\circ\\), and \\(c = 12\\). Solve the triangle. Round sides to the nearest tenth and angles to the nearest degree.<br>(2) In triangle \\(ABC\\), \\(C = 90^\\circ\\), \\(a = 7\\), and \\(b = 24\\). Solve the triangle. Round sides to the nearest integer and angles to the nearest tenth of a degree.",
+              "coldPlain": "(1) C = 90, B = 25 degrees, c = 12: solve the triangle (sides to the nearest tenth, angles to the nearest degree). (2) C = 90, a = 7, b = 24: solve the triangle (sides to the nearest integer, angles to the nearest tenth).",
+              "note": "Show which ratio (sin, cos, or tan) you set up for each missing part and why, and check that all three angles add to 180 degrees.",
+              "coldA": "(1) \\(A = 65^\\circ\\), \\(b \\approx 5.1\\), \\(a \\approx 10.9\\).[[graph:SF1]][[graph:F1s]](2) \\(c = 25\\), \\(A \\approx 16.3^\\circ\\), \\(B \\approx 73.7^\\circ\\).[[graph:SF2]][[graph:F2s]]",
+              "solution": "(1) A = 65. From B, b is opposite and c the hypotenuse: b = 12 sin 25, about 5.1; a = 12 cos 25, about 10.9. (2) c = sqrt(49 + 576) = 25; A = tan^(-1)(7/24), about 16.3 degrees; B = 73.7 degrees.",
+              "mistake": "Mixing up which side is opposite B versus opposite A.",
+              "again": "(1) \\(C = 90^\\circ\\), \\(A = 70^\\circ\\), \\(a = 6.5\\). Solve the triangle (sides to the nearest tenth). (2) \\(C = 90^\\circ\\), \\(b = 35\\), \\(c = 37\\). Solve the triangle.",
+              "againA": "(1) \\(B = 20^\\circ\\), \\(c = \\tfrac{6.5}{\\sin 70^\\circ} \\approx 6.9\\), \\(b = \\tfrac{6.5}{\\tan 70^\\circ} \\approx 2.4\\). (2) \\(a = 12\\), \\(A = \\sin^{-1}\\left(\\tfrac{12}{37}\\right) \\approx 18.9^\\circ\\), \\(B \\approx 71.1^\\circ\\).",
+              "reflect": "Which type (angle and side, or two sides) do you want more practice with?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "AI Prompts",
+                  "tab": "tab-prompts"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
